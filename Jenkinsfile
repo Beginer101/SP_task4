@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        bat '"D:\\VS\\MSBuild\\Current\\Bin\\MSBuild.exe" SP_task4.sln /p:Configuration=Debug /p:Platform=x64 /m'
+                        bat 'cd C:\\Users\\User\\source\\repos\\SP_task4\\SP_task4 && "D:\\VS\\MSBuild\\Current\\Bin\\MSBuild.exe" SP_task4.sln /p:Configuration=Debug /p:Platform=x64 /m'
                     } catch (Exception e) {
                         echo "Build error: ${e.message}"
                         currentBuild.result = 'FAILURE'
